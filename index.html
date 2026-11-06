@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ammu's Birthday ❤️</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="heart-icon">♡</span> Ammu's Birthday <span class="heart-icon">♡</span>
+    </div>
+    <div class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#memories">Our Memories</a>
+      <a href="#games">Games</a>
+      <a href="#surprises">Surprises</a>
+    </div>
+    <div class="music-player">
+      <button id="musicToggle" class="music-btn" aria-label="Toggle Music">
+        <span id="musicIcon">🎵</span>
+      </button>
+      <input id="volumeSlider" type="range" min="0" max="1" step="0.01" value="0.5" aria-label="Music volume" />
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero-full">
+    <img src="assets/hero-section.png" alt="Ammu's Birthday" class="full-hero-img" onclick="openLightbox(this.src)" onerror="this.src='https://via.placeholder.com/1920x1080/E9D5FF/5B21B6?text=Add+hero-section.png'">
+    <div class="hero-overlay">
+      <a href="#countdown-section" class="btn-primary btn-glow">Enter Your Surprise ➔</a>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN SECTION -->
+  <section id="countdown-section" class="countdown-section">
+    <div class="countdown-bg-card">
+      <img src="assets/birthday-countdown-blank.png" alt="Countdown Background" class="countdown-bg-img" onerror="this.style.display='none'">
+      <div class="countdown-content">
+        <div class="countdown-grid" id="countdownGrid">
+          <div class="count-box"><span class="num" id="days">00</span><span class="label">Days</span></div>
+          <div class="count-box"><span class="num" id="hours">00</span><span class="label">Hours</span></div>
+          <div class="count-box"><span class="num" id="minutes">00</span><span class="label">Minutes</span></div>
+          <div class="count-box"><span class="num" id="seconds">00</span><span class="label">Seconds</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery" class="gallery-section">
+    <div class="section-header">
+      <div class="header-title">
+        <div class="header-icon-wrap">
+          <img src="assets/ammu-with-baby.jpeg" alt="Gallery Icon">
+        </div>
+        <div>
+          <h2 class="section-title">Birthday Girl Gallery ♡</h2>
+          <p class="subtitle">Some of your beautiful moments ♡</p>
+        </div>
+      </div>
+      <button class="btn-secondary view-all">View All ➔</button>
+    </div>
+    
+    <div class="gallery-wrapper">
+      <button class="nav-arrow left" onclick="scrollGallery(-1)">❮</button>
+      <div class="gallery-scroll" id="galleryScroll">
+        <img src="assets/green-dress.png" alt="Memory 1" class="gallery-img" onclick="openLightbox(this.src)" onerror="this.src='https://via.placeholder.com/300x400/E9D5FF/5B21B6?text=Photo+1'">
+        <img src="assets/happy-birthday-ammu.png" alt="Memory 2" class="gallery-img" onclick="openLightbox(this.src)" onerror="this.src='https://via.placeholder.com/300x400/E9D5FF/5B21B6?text=Photo+2'">
+        <img src="assets/ammu-with-baby.jpeg" alt="Memory 3" class="gallery-img" onclick="openLightbox(this.src)" onerror="this.src='https://via.placeholder.com/300x400/E9D5FF/5B21B6?text=Photo+3'">
+        <img src="assets/ammu-with-baby1.jpeg" alt="Memory 4" class="gallery-img" onclick="openLightbox(this.src)" onerror="this.src='https://via.placeholder.com/300x400/E9D5FF/5B21B6?text=Photo+4'">
+      </div>
+      <button class="nav-arrow right" onclick="scrollGallery(1)">❯</button>
+    </div>
+    <div class="scroll-dots">
+      <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+  </section>
+
+  <!-- OUR MEMORIES -->
+  <section id="memories" class="memories-section">
+    <div class="header-title" style="justify-content: center; margin-bottom: 10px;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      <h2 class="section-title" style="margin: 0;">Our Memory Lane ♡</h2>
+    </div>
+    <p class="subtitle" style="text-align: center;">Our little story in pictures ♡</p>
+    
+    <div class="timeline">
+      <div class="timeline-card">
+        <img src="assets/sanjay-ammu-couple.jpeg" alt="Together" onclick="openLightbox(this.src)" onerror="this.src='https://via.placeholder.com/300x200/E9D5FF/5B21B6?text=Couple+Photo'">
+        <p class="tl-caption">Together ♡</p>
+      </div>
+      <div class="timeline-card">
+        <img src="assets/old-couple-bw.png" alt="A Special Day" onclick="openLightbox(this.src)" onerror="this.src='https://via.placeholder.com/300x200/E9D5FF/5B21B6?text=Old+Photo'">
+        <p class="tl-caption">A Special Day ♡</p>
+      </div>
+      <div class="timeline-card">
+        <img src="assets/ammu-with-baby.jpeg" alt="A Precious Moment" onclick="openLightbox(this.src)" onerror="this.src='https://via.placeholder.com/300x200/E9D5FF/5B21B6?text=Baby+Photo'">
+        <p class="tl-caption">A Precious Moment ♡</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOVE GAME ARCADE -->
+  <section id="games" class="games-section">
+    <div class="header-title" style="justify-content: center;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"></rect><path d="M6 12h4"></path><path d="M8 10v4"></path><circle cx="16" cy="12" r="1"></circle><circle cx="18" cy="10" r="1"></circle></svg>
+      <h2 class="section-title" style="margin: 0;">Love Game Arcade ♡</h2>
+    </div>
+    <p class="subtitle" style="text-align: center;">Play, Win & Unlock My Love ♡</p>
+    
+    <div class="games-grid">
+      <div class="game-card" onclick="openGame('pin')">
+        <div class="game-icon"><img src="assets/Love-Letter.png" alt="Love Letter"></div>
+        <h3>Love Letter</h3>
+        <p>(PIN Unlock)</p>
+      </div>
+      <div class="game-card" onclick="openGame('memory')">
+        <div class="game-icon"><img src="assets/couple-quiz.png" alt="Memory Match"></div>
+        <h3>Memory Match</h3>
+        <p>(Match the cards)</p>
+      </div>
+      <div class="game-card" onclick="openGame('scratch')">
+        <div class="game-icon"><img src="assets/scratch-card.png" alt="Scratch Card"></div>
+        <h3>Scratch Card</h3>
+        <p>(Reveal a Surprise)</p>
+      </div>
+      <div class="game-card" onclick="openGame('wheel')">
+        <div class="game-icon"><img src="assets/spin-the-wheel.png" alt="Spin the Wheel"></div>
+        <h3>Spin the Wheel</h3>
+        <p>(Love Rewards)</p>
+      </div>
+      <div class="game-card" onclick="openGame('puzzle')">
+        <div class="game-icon"><img src="assets/photo-puzzle.png" alt="Photo Puzzle"></div>
+        <h3>Photo Puzzle</h3>
+        <p>(Complete Our Picture)</p>
+      </div>
+      <div class="game-card" onclick="openGame('catch')">
+        <div class="game-icon"><img src="assets/catch-my-hearts.png" alt="Catch My Hearts"></div>
+        <h3>Catch My Hearts</h3>
+        <p>(Tap & Collect)</p>
+      </div>
+      <div class="game-card" onclick="openGame('hunt')">
+        <div class="game-icon"><img src="assets/hidden-rose-hunt.png" alt="Hidden Rose Hunt"></div>
+        <h3>Hidden Rose Hunt</h3>
+        <p>(Find 5 Roses)</p>
+      </div>
+      <div class="game-card" onclick="openGame('timeline')">
+        <div class="game-icon"><img src="assets/our-love-timeline.png" alt="Our Love Timeline"></div>
+        <h3>Our Love Timeline</h3>
+        <p>(Our Journey)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECRET SURPRISES -->
+  <section id="surprises" class="surprises-section">
+    <div class="header-title" style="justify-content: center;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>
+      <h2 class="section-title" style="margin: 0;">Secret Surprises ♡</h2>
+    </div>
+    <p class="subtitle" style="text-align: center;">Click, Play & Discover Hidden Love ♡</p>
+    
+    <div class="surprises-grid">
+      <div class="surprise-card" id="secretHeartBtn">
+        <div class="surprise-icon-wrap"><img src="assets/secret-heart.png" alt="Secret Heart"></div>
+        <h3>Secret Heart</h3>
+        <p>(Click 7 Times)</p>
+      </div>
+      <div class="surprise-card" id="cakeBtn" onclick="openCakeModal()">
+        <div class="surprise-icon-wrap"><img src="assets/birthday-cake.png" alt="Birthday Cake"></div>
+        <h3>Birthday Cake</h3>
+        <p>(Blow & Cut)</p>
+      </div>
+      <div class="surprise-card" id="magicBtn">
+        <div class="surprise-icon-wrap"><img src="assets/magic-button.png" alt="Magic Button"></div>
+        <h3>Magic Button</h3>
+        <p>(A Special Effect)</p>
+      </div>
+      <div class="surprise-card" id="hiddenMsgBtn">
+        <div class="surprise-icon-wrap"><img src="assets/hidden-message.png" alt="Hidden Message"></div>
+        <h3>Hidden Message</h3>
+        <p>(Just for You)</p>
+      </div>
+    </div>
+  </section>
+
+    <!-- LOVE LETTER SECTION (Invisible Button Overlay) -->
+  <section class="letter-section">
+    <div class="letter-container">
+      <!-- The Image -->
+      <img src="assets/love-letter-panel.png" alt="Love Letter" class="full-letter-img">
+      
+      <!-- The Invisible Button perfectly placed over the image button -->
+      <button class="letter-btn-overlay" onclick="openLetter()" aria-label="Open My Letter"></button>
+    </div>
+  </section>
+
+  <!-- FOOTER (Full Image) -->
+  <section class="final-banner">
+    <img src="assets/final-love-banner.png" alt="Final Banner" class="full-footer-img" onerror="this.src='https://via.placeholder.com/1920x600/E9D5FF/5B21B6?text=Add+final-love-banner.png'">
+  </section>
+
+  <!-- CUSTOM POPUP -->
+  <div id="customPopup" class="modal hidden">
+    <div class="custom-popup-content">
+      <div class="popup-icon" id="popupIcon">💖</div>
+      <h2 id="popupTitle" style="font-family: var(--font-script); font-size: 3rem; color: var(--deep-purple); margin-bottom: 15px;">Secret Unlocked!</h2>
+      <p id="popupMessage" style="font-size: 1.1rem; color: var(--text-main); margin-bottom: 25px; line-height: 1.6;"></p>
+      <button class="btn-primary" onclick="closePopup()">Okay, I love you too ❤️</button>
+    </div>
+  </div>
+
+  <!-- CAKE MODAL -->
+  <div id="cakeModal" class="modal hidden">
+    <div class="cake-modal-content">
+      <span class="close-btn" onclick="closeCakeModal()">&times;</span>
+      <div id="cakePhase1" class="cake-phase active">
+        <h2 class="cake-title">Get Ready... 🎂</h2>
+        <div id="cakeCountdownDisplay" class="cake-countdown">3</div>
+      </div>
+      <div id="cakePhase2" class="cake-phase">
+        <h2 class="cake-title" id="cakePhase2Title">Blow the Candles! 💨</h2>
+        <p id="cakePhase2Text" style="color: var(--text-muted); margin-bottom: 20px;">Make a wish and blow into your mic</p>
+        <div class="cake-stage" id="cakeStage">
+          <div class="cake-container" id="theCake">
+            <div class="plate"></div>
+            <div class="cake">
+              <div class="layer layer-bottom"></div>
+              <div class="layer layer-middle"></div>
+              <div class="layer layer-top"></div>
+              <div class="candle" style="left: 20%;"><div class="flame"></div><div class="wick"></div></div>
+              <div class="candle" style="left: 50%;"><div class="flame"></div><div class="wick"></div></div>
+              <div class="candle" style="left: 80%;"><div class="flame"></div><div class="wick"></div></div>
+            </div>
+          </div>
+        </div>
+        <button id="micBtn" class="btn-primary" style="margin-top: 20px; font-size: 1rem; padding: 12px 24px; position: relative; z-index: 10;">🎤 Tap to Blow</button>
+        <p id="micStatus" style="font-size: 0.9rem; color: var(--text-muted); margin-top: 10px;">Mic is off</p>
+        <div class="knife-container hidden" id="knife"><div class="knife-blade"></div><div class="knife-handle"></div></div>
+      </div>
+      <div id="cakePhase3" class="cake-phase">
+        <h2 class="cake-title" style="color: var(--deep-purple); font-family: var(--font-script); font-size: 3.5rem;">Happy Birthday Ammu! 🎉</h2>
+        <p style="font-size: 1.2rem; color: var(--primary-purple); margin-top: 15px;">Wish granted! I love you so much. ❤️</p>
+        <button class="btn-primary" onclick="closeCakeModal()" style="margin-top: 30px;">Back to Surprises</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- OTHER MODALS -->
+  <div id="lightbox" class="modal hidden" onclick="closeModal(event)">
+    <span class="close-btn">&times;</span>
+    <img id="lightboxImg" src="" alt="Zoomed Photo">
+  </div>
+
+  <div id="gameModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeGame()">&times;</span>
+      <h2 id="gameTitle">Game Title</h2>
+      <div id="gameContent" class="game-content-area"></div>
+    </div>
+  </div>
+
+  <div id="letterModal" class="modal hidden">
+    <div class="modal-content letter-paper">
+      <span class="close-btn" onclick="closeModal(event)">&times;</span>
+      <p class="letter-text">
+        Dear Ammu,<br><br>
+        I don't know how to explain how special you are to me. Your smile makes ordinary days beautiful. Your happiness matters to me more than you know.<br><br>
+        I made this little surprise because I wanted your birthday to feel a little more magical.<br><br>
+        I hope your life is always filled with happiness, beautiful memories and endless reasons to smile.<br><br>
+        Happy Birthday in advance, Ammu.<br><br>
+        With love,<br>
+        <span class="signature">Sanjay ❤️</span>
+      </p>
+    </div>
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="assets/romantic-music.mp3" type="audio/mpeg">
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>
